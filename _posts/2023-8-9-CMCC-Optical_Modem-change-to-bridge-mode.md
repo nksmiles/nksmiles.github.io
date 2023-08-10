@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: 移动光猫修改桥接模式
-categories: [OpenWrt]
+categories: [Network]
 ---
 
 需要先登录光猫，记录原有联网参数，然后修改或新建网络连接。

@@ -7,7 +7,7 @@ categories: [VPS,Linux]
 在使用 BandwagonHost 的 KiwiVM 面板时发现，新安装的 Linux 系统可以正常显示 RAM、SWAP 信息，但是重启后，这两项信息就无法显示了，而且 Root shell 等功能也无法正常使用。 
 （在 Debian 11、AlmaLinux 9 上均复现此问题。）
 
-研究发现，是因为 qemu-kvm_ga 脚本没有运行，手动运行后，
+测试发现，是因为 `qemu-kvm_ga` 脚本没有运行，手动运行后，
 ```bash
 /usr/bin/qemu-kvm_ga
 ```

@@ -1,14 +1,14 @@
 ---
 layout: mypost
-title:  光猫路由模式下（未开启桥接），openwrt启用ipv6的设置
+title:  光猫路由模式下（未开启桥接），OpenWrt启用ipv6的设置
 categories: [OpenWrt,Network]
 ---
 
-以下设置在lean openwrt移动、电信、联通均测试成功。 
+以下设置在 Lean OpenWrt 固件，移动、电信、联通宽带均测试成功。 
 
-最新版的官方openwrt，可以直接在设置中将LAN和WAN6均设置ipv6为中继模式。但lean 的openwrt中，wan6的Luci界面无此设置选项。设置说明如下： 
+最新版的官方 OpenWrt，可以直接在设置中将LAN和WAN6均设置ipv6为中继模式。但 Lean 的 OpenWrt中，wan6的 Luci 界面无此设置选项。设置说明如下： 
 1. 确保编译时已经添加ipv6helper。
-2. 需要终端登录openwrt，修改/etc/config/dhcp配置文件：
+2. 需要终端登录 OpenWrt，修改`/etc/config/dhcp`配置文件：
 ```bash
 vi /etc/config/dhcp
 ```
@@ -29,7 +29,7 @@ vi /etc/config/dhcp
 	        option master '1'
 ```
 
-若原配置文件中无config dhcp 'wan6'部分，直接手动添加。
+若原配置文件中无`config dhcp 'wan6'`部分，直接手动添加。
 
 配置文件修改完成后重启dnsmasq服务：
 ```bash

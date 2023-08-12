@@ -56,4 +56,5 @@ extCount: false
 # 友情链接
 links:
   - title: TMaize Blog
+    desc: TMaize的个人博客
     url: https://blog.tmaize.net/

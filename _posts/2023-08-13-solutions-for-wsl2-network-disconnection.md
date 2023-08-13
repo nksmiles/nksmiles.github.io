@@ -8,7 +8,7 @@ categories: [WSL2,Windows,Linux]
 
 如果是在笔记本电脑上启用了 WSL2，目前已知在切换不同 WiFi 后，就会遇到这种 WSL2 突然连不上网的情况。 
 
-这时候如果运行 `apt update` 会网络超时，如果 ping 域名，有的有回显，但反应很慢，有的直接无法解析域名。
+这时候如果在 Linux 子系统运行 `apt update` 或 `yum update` 会网络超时，如果 ping 域名，有的有回显，但反应很慢，有的直接无法解析域名。
 最直接的判断方法是在 WSL Linux 子系统中用 `nslookup` 查看域名解析：
 ```bash
 nslookup www.nabuyiyang.top

@@ -13,7 +13,7 @@ categories: [WSL2,Windows,Linux]
 ```bash
 nslookup www.nabuyiyang.top
 ```
-会出现类似 `communications error to 172.28.240.1#53: timed out` 这样的提示。说明 WSL2 自动配置的 NAT 出问题了。
+会出现类似 `communications error to 172.28.240.1#53: timed out` 这样的提示。说明 WSL2 自动配置的 NAT 网络出问题了，导致域名无法正常解析。
 
 ## 方案 1
 
@@ -60,10 +60,9 @@ wsl --shutdown
 nameserver 223.5.5.5
 nameserver 223.6.6.6
 ```
+
 ## 参考
 
-[WSL2 莫名其妙连不上网了](https://v2ex.com/t/797357) 
-
-[给 WSL2 和 Host 设置静态 IP 地址，每次重启 Host 或 WSL2 后运行](https://gist.github.com/Youngv/04fe217edda61c9e78ed4c8dfac62a56) 
-
-[WSL无法访问网络的解决办法](https://blog.csdn.net/wbvalid/article/details/115540217)
+* [WSL2 莫名其妙连不上网了](https://v2ex.com/t/797357) 
+* [给 WSL2 和 Host 设置静态 IP 地址，每次重启 Host 或 WSL2 后运行](https://gist.github.com/Youngv/04fe217edda61c9e78ed4c8dfac62a56) 
+* [WSL无法访问网络的解决办法](https://blog.csdn.net/wbvalid/article/details/115540217)

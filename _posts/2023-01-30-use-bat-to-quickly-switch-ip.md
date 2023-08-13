@@ -85,3 +85,7 @@ netsh interface dump > NetConfig.cfg
 ```cmd
 netsh exec NetConfig.cfg
 ```
+
+## 另一个解决方案
+
+[IP配置工具_2.6__一键切换IP、改Mac、计算机名](https://www.52pojie.cn/thread-1368052-1-1.html)

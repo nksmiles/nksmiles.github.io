@@ -8,7 +8,7 @@ categories: [Word VBA]
 
 Word中用于更新所有域的宏代码： 
 
-```vba
+```
     Dim aField As Field
     Dim aStory As Range
     ''' Update all fields in the document

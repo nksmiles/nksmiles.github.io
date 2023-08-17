@@ -20,7 +20,7 @@ nslookup www.nabuyiyang.top
 先说一个解决方案：
 
 以管理员身份运行`命令提示符`或者 `Powershell`：
-```bat
+```powershell
 wsl --shutdown
 netsh winsock reset
 netsh int ip reset all
@@ -34,7 +34,7 @@ ipconfig /flushdns
 ## 方案 2
 
 给 WSL2 和 Host 设置静态 IP 地址，每次重启 Host 或 WSL2 后运行：
-```bat
+```powershell
 @ECHO OFF
 wsl -d Ubuntu-20.04 -u root ip addr del $(ip addr show eth0 ^| grep 'inet\b' ^| awk '{print $2}' ^| head -n 1) dev eth0
 wsl -d Ubuntu-20.04 -u root ip addr add 192.168.50.2/24 broadcast 192.168.50.255 dev eth0

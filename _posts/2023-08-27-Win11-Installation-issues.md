@@ -30,3 +30,10 @@ BypassSecureBootCheck = 1
 
 ## 问题2：让我们为你连接到网络
 
+![image](win11-2.png)
+
+键盘按住 SHIFT+F10，在弹出的命令行中输入：
+```
+OOBE\BYPASSNRO
+```
+重启后会出现“我没有 Internet 连接”按钮。

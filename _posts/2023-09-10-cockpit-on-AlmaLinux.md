@@ -51,11 +51,11 @@ firewall-cmd --reload
 
 - 在 web 界面上，我们需要输入我们的 AlmaLinux 用户名和密码来登录。登录后，我们就可以看到我们的服务器的各种信息和统计数据，并且可以执行一些管理操作。
 
-# 可登录用户
+# 禁止登录的用户
 
-不允许登录的用户，可以在 `/etc/cockpit/disallowed-users` 中管理。添加到文件中可以禁止该用户登录。
+不允许登录的用户，可以在 `/etc/cockpit/disallowed-users` 中管理。添加到文件中可以禁止该用户登录。`/etc/cockpit/disallowed-users` 中的用户名是每行一个。这个文件用来指定哪些用户不能登录 Cockpit。如果你想要允许 root 用户登录，你需要从这个文件中删除 root 这一行。如果你想要禁止其他用户登录，你可以在这个文件中添加他们的用户名，每个用户名占一行。
 
-# 启用 HTTPS
+# 启用 HTTPS （SSL/TLS）
 
 对于有域名的服务器，使用 acme.sh 免费申请 HTTPS 证书后，可以通过在 `/etc/cockpit/ws-certs.d` 创建链接来启用 https：
 ```sh

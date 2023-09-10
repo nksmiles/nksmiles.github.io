@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: Word VBA 更新所有域的宏代码
-categories: [Word VBA]
+categories: [Word]
 ---
 
 当Word中插入的域很多时，更新域就变得极为繁琐，利用Word里面的宏功能，通过下面的VBA代码可以一键快速更新文档中的所有域。高效、方便。

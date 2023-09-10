@@ -11,36 +11,44 @@ Cockpit 是一款 Linux 支持的软件应用，可以让用户通过基于 web 
 要在 AlmaLinux 上安装和使用 Cockpit，我们可以参考以下步骤：
 
 - 首先，确保我们的 AlmaLinux 系统是最新的，运行以下命令来更新所有的软件包：
-```
+```sh
 dnf update
 ```
+
 - 然后，安装并启用 EPEL 存储库，这样我们就可以安装 RHEL 支持的额外软件包：
-```
+```sh
 dnf install epel-release
 ```
+
 - 接下来，从 AlmaLinux 的 extras 存储库中安装 Cockpit 软件包：
-```
+```sh
 dnf install cockpit
 ```
+
 - 安装完成后，使用以下命令启动 Cockpit 服务：
-```
+```sh
 systemctl start cockpit
 ```
+
 - 为了让 Cockpit 服务在系统重启后仍然运行，使用以下命令使其自动启动：
-```
+```sh
 systemctl enable --now cockpit.socket
 ```
+
 - 然后，检查 Cockpit 服务的状态，确保它已经正常运行¹²³：
-```
+```sh
 systemctl status cockpit.service
 ```
+
 - 此外，还需要在防火墙中开放 Cockpit 的默认 HTTP 端口 9090¹²³：
 ```sh
 firewall-cmd --permanent --zone=public --add-service=cockpit
 firewall-cmd --reload
 ```
+
 - 最后，可以通过浏览器访问 Cockpit 的 web 界面，输入我们的服务器的 IP 地址和端口号。例如：
 [http://192.168.138.197:9090](http://192.168.138.197:9090)
+
 - 在 web 界面上，我们需要输入我们的 AlmaLinux 用户名和密码来登录。登录后，我们就可以看到我们的服务器的各种信息和统计数据，并且可以执行一些管理操作。
 
 # 可登录用户

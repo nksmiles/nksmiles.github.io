@@ -57,7 +57,7 @@ firewall-cmd --reload
 
 # 启用 HTTPS （SSL/TLS）
 
-对于有域名的服务器，使用 acme.sh 免费申请 HTTPS 证书后，可以通过在 `/etc/cockpit/ws-certs.d` 创建链接来启用 https：
+对于有域名的服务器，使用 acme.sh 免费申请 HTTPS 证书后，可以通过在 `/etc/cockpit/ws-certs.d` 创建链接来使用 SSL/TLS 证书：
 ```sh
 ln /home/user/.acme.sh/nabuyiyang.top_ecc/nabuyiyang.top.cer /etc/cockpit/ws-certs.d/nabuyiyang.top.cert
 ln /home/user/.acme.sh/nabuyiyang.top_ecc/nabuyiyang.top.key /etc/cockpit/ws-certs.d/nabuyiyang.top.key

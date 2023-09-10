@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: Visual Studio Code 自定义用户代码片段
-categories: [小技巧]
+categories: [TMaize Blog]
 ---
 Visual Studio Code不但跨平台，还有良好的扩展性。用户可以自定义代码块方便开发
 

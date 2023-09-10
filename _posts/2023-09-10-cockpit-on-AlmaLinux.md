@@ -53,7 +53,7 @@ firewall-cmd --reload
 
 # 禁止登录的用户
 
-不允许登录的用户，可以在 `/etc/cockpit/disallowed-users` 中管理。添加到文件中可以禁止该用户登录。`/etc/cockpit/disallowed-users` 中的用户名是每行一个。这个文件用来指定哪些用户不能登录 Cockpit。如果你想要允许 root 用户登录，你需要从这个文件中删除 root 这一行。如果你想要禁止其他用户登录，你可以在这个文件中添加他们的用户名，每个用户名占一行。
+不允许登录的用户，可以在 `/etc/cockpit/disallowed-users` 中管理。添加到文件中可以禁止该用户登录。`/etc/cockpit/disallowed-users` 中的用户名是每行一个。这个文件用来指定哪些用户不能登录 Cockpit。如果我们想要允许 root 用户登录，我们需要从这个文件中删除 root 这一行。如果我们想要禁止其他用户登录，我们可以在这个文件中添加他们的用户名，每个用户名占一行。
 
 # 启用 HTTPS （SSL/TLS）
 

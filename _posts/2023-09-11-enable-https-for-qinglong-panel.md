@@ -41,7 +41,7 @@ server {
 ```sh
 nginx -s reload
 ```
-需要重启 Nginx 服务使配置生效。
+重启 Nginx 服务使配置生效。
 
 ## 启用 HTTP 自动跳转 HTTPS
 
@@ -59,4 +59,4 @@ server {
 ```sh
 nginx -s reload
 ```
-需要重启 Nginx 服务使配置生效。
+重启 Nginx 服务使配置生效。

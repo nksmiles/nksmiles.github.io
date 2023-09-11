@@ -1,38 +1,38 @@
 ---
 layout: mypost
-title: 为青龙面板启用 https
+title: 为青龙面板启用 HTTPS
 categories: [Linux]
 ---
 
-青龙面板默认不支持 https 访问，我们可以通过 nginx 反向代理实现：
+青龙面板本身不支持 HTTPS 访问，我们可以通过 nginx 反向代理实现：
 
-- 首先，我们需要有一个域名和 SSL 证书，以便使用 https 协议访问青龙面板。
+- 首先，我们需要有一个域名和 SSL 证书，以便使用 HTTPS 协议访问青龙面板。
 - 其次，我们需要在服务器上安装 Nginx，并配置反向代理，将域名指向青龙面板的端口（默认是 5700）。
 - 然后，我们需要修改 Nginx 的配置文件，添加 proxy_ssl_server_name on; 这一行，以及 sub_filter "ip:5700" "你的域名"; 这一行，用于替换青龙面板中的 ip 地址为域名。
 - 最后，我们需要重启 Nginx 服务，使配置生效。
 
-## 配置 https
+## 配置 HTTPS
 使用 `nginx -t` 命令查看配置文件所在路径。然后编辑配置文件：
 
 ```
 server {
     listen       443 ssl;
-    ssl_certificate /root/.acme.sh/cc.nabuyiyang.top_ecc/cc.nabuyiyang.top.cer;
-    ssl_certificate_key /root/.acme.sh/cc.nabuyiyang.top_ecc/cc.nabuyiyang.top.key;
+    ssl_certificate /home/user/.acme.sh/example.com_ecc/example.com.cer;
+    ssl_certificate_key /home/user/.acme.sh/example.com_ecc/example.com.key;
     ssl_session_timeout 5m;
     ssl_protocols TLSv1.3;
     http2        on;
-    server_name  cc.nabuyiyang.top;
+    server_name  example.com;
 
-    root /usr/share/nginx/html;
+    home/user /usr/share/nginx/html;
 
     location / {
         #反向代理
         proxy_ssl_server_name on;
-        proxy_pass http://cc.nabuyiyang.top:5700;
+        proxy_pass http://example.com:5700;
         proxy_set_header Accept-Encoding '';
         #过滤器模块
-        sub_filter "cc.nabuyiyang.top:5700" "cc.nabuyiyang.top";
+        sub_filter "example.com:5700" "example.com";
         sub_filter_once off;
     }
 }
@@ -49,8 +49,8 @@ nginx -s reload
 ```
 server {
     listen 80;
-    server_name cc.nabuyiyang.top;
-    return 301 https://$host$request_uri;
+    server_name example.com;
+    return 301 HTTPS://$host$request_uri;
 }
 ```
 注意这一部分要添加到 `server {    listen 443; ...}`后面。

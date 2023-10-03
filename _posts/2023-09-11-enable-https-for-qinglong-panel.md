@@ -29,7 +29,7 @@ server {
     http2        on;
     server_name  example.com;
 
-    home/user /usr/share/nginx/html;
+    root /usr/share/nginx/html;
 
     location / {
         #反向代理

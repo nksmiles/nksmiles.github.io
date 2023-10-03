@@ -21,15 +21,15 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 ```
 server {
-    listen       443 ssl;
-    ssl_certificate /home/user/.acme.sh/example.com_ecc/example.com.cer;
-    ssl_certificate_key /home/user/.acme.sh/example.com_ecc/example.com.key;
-    ssl_session_timeout 5m;
-    ssl_protocols TLSv1.3;
-    http2        on;
-    server_name  example.com;
+    listen               443 ssl;
+    ssl_certificate      /home/user/.acme.sh/example.com_ecc/example.com.cer;
+    ssl_certificate_key  /home/user/.acme.sh/example.com_ecc/example.com.key;
+    ssl_session_timeout  5m;
+    ssl_protocols        TLSv1.3;
+    http2                on;
+    server_name          example.com;
 
-    root /usr/share/nginx/html;
+    root                 /usr/share/nginx/html;
 
     location / {
         #反向代理
@@ -53,9 +53,9 @@ nginx -s reload
 如果我们想要实现 HTTP 自动跳转 HTTPS 的功能，我们还可以在配置文件中添加一些重定向的规则：
 ```
 server {
-    listen 80;
-    server_name example.com;
-    return 301 HTTPS://$host$request_uri;
+    listen       80;
+    server_name  example.com;
+    return       301 HTTPS://$host$request_uri;
 }
 ```
 注意这一部分要添加到 `server {    listen 443; ...}`后面。

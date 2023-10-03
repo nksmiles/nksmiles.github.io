@@ -33,12 +33,12 @@ server {
 
     location / {
         #反向代理
-        proxy_ssl_server_name on;
-        proxy_pass http://example.com:5700;
-        proxy_set_header Accept-Encoding '';
+        proxy_ssl_server_name  on;
+        proxy_pass             http://example.com:5700;
+        proxy_set_header       Accept-Encoding '';
         #过滤器模块
-        sub_filter "example.com:5700" "example.com";
-        sub_filter_once off;
+        sub_filter             "example.com:5700" "example.com";
+        sub_filter_once        off;
     }
 }
 ```

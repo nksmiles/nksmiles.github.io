@@ -4,14 +4,14 @@ title: 在 OneDrive 中禁用“使用 Office 应用程序同步我打开的 Off
 categories: [OneDrive]
 ---
 
-OneDrive 老版中有一个设置选项，可以禁用“使用 Office 应用程序同步我打开的 Office 文件”。但在新版的 OneDrive 中，如果之前这个选项是禁用的，那么新版本会提示你启用该功能，一旦该功能被启用，在新版本的 OneDrive 中这个选项就消失了……在新版本就找不到禁用的选项了。
+OneDrive 老版本中有一个文件协作设置选项，可以禁用“使用 Office 应用程序同步我打开的 Office 文件”。但在新版的 OneDrive 中，如果之前这个选项是禁用的，那么新版本会提示你启用该功能，一旦该功能被启用，在新版本的 OneDrive 中这个选项就消失了……在新版本就找不到禁用的选项了。
 
-[!image](oldOneDrive.png)
+![image](oldOneDrive.png)
 
 新版本中，一旦该功能被启用，这个选项就会消失：
 
-[!image](newOneDrive1.png)
-[!image](newOneDrive2.png)
+![image](newOneDrive1.png)
+![image](newOneDrive2.png)
 
 # 解决办法 1
 
@@ -24,16 +24,16 @@ OneDrive 老版中有一个设置选项，可以禁用“使用 Office 应用程
 
 请注意，这里如果启用文件协作，这个选项会直接消失。
 
-# 解决办法 2
+# 解决办法 2 ???
 
 今天在查看 OneDrive 文档的时候发现了微软如下说明：
 
-[coauthor-and-share-in-office-desktop-apps](https://learn.microsoft.com/en-us/sharepoint/use-group-policy?redirectSourcePath=%252farticle%252f8a409b0c-ebe1-4bfa-a08e-998389a9d823#coauthor-and-share-in-office-desktop-apps)
+[Coauthor and share in Office desktop apps](https://learn.microsoft.com/en-us/sharepoint/use-group-policy?redirectSourcePath=%252farticle%252f8a409b0c-ebe1-4bfa-a08e-998389a9d823#coauthor-and-share-in-office-desktop-apps)
 
 ```
-[HKCU\SOFTWARE\Policies\Microsoft\OneDrive] "EnableAllOcsiClients"=dword:00000001
+[HKCU\SOFTWARE\Policies\Microsoft\OneDrive] "EnableAllOcsiClients"=dword:00000000
 ```
-后续可以直接修改注册表解决了。
+可惜搜遍注册表，并没有找到……
 
 # 为什么要禁用这个功能
 

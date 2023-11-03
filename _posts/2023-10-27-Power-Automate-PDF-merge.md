@@ -31,6 +31,8 @@ System.RunApplication.RunApplication ApplicationPath: MergedPDF WindowStyle: Sys
 
 ```
 
+![image](PowerAutomate1.png)
+
 说明：
 
 如果要将 Power Automate 工作流复制出来，需要将每个 子流 复制并粘贴到记事本。

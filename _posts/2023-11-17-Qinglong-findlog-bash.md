@@ -20,4 +20,4 @@ for file in `find /root/ql/data/log -name "*.log"`; do
 done
 ```
 
-(findlog.sh)[findlog.sh]
+[findlog.sh](findlog.sh)

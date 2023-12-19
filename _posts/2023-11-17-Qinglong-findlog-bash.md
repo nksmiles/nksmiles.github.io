@@ -4,7 +4,8 @@ title: 青龙面板依赖缺失查找
 categories: [Linux]
 ---
 
-通过查找青龙面板的日志来搜索缺失的依赖。缺失的依赖需要手动安装。
+通过查找青龙面板的日志来搜索缺失的依赖。缺失的依赖仍然需要手动安装。
+
 
 ```bash
 # 遍历/root/ql/data/log目录及其所有子目录中的.log文件
@@ -19,4 +20,3 @@ for file in `find /root/ql/data/log -name "*.log"`; do
 done
 ```
 
-[findlog.sh](findlog.sh)

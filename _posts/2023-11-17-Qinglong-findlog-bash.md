@@ -18,6 +18,7 @@ for file in `find /root/ql/data/log -name "*.log"`; do
         echo "File path: $file"
     fi
 done
+echo "End."
 ```
 
 [findlog.sh](findlog.sh)

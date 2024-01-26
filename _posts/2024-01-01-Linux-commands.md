@@ -22,3 +22,5 @@ nginx   708088  root    8u  IPv4 2488628      0t0  TCP *:https (LISTEN)
 nginx   708089 nginx    8u  IPv4 2488628      0t0  TCP *:https (LISTEN)
 nginx   708090 nginx    8u  IPv4 2488628      0t0  TCP *:https (LISTEN)
 ```
+
+说明：https默认为443端口。

@@ -12,16 +12,18 @@ categories: [Router]
  
 3. 把网址栏中的apsetting改为setting后回车。
 ```
-http://192.168.8.207/cgi-bin/luci/;stok=356a7ad2164cf553a711031f1fcf43c7/web/apsetting/wan
+http://172.28.88.202/cgi-bin/luci/;stok=3456abcdef7890/web/apsetting/wan
 ```
 类似上面的网址改为：
 ```
-http://192.168.8.207/cgi-bin/luci/;stok=356a7ad2164cf553a711031f1fcf43c7/web/setting/wan
+http://172.28.88.202/cgi-bin/luci/;stok=3456abcdef7890/web/setting/wan
 ```
 
 5. 点击出现的局域网设置，把局域网IP地址改成自己想设置的地址并保存。
+
 ![LAN IP](LAN_IP.png)
 
 6. 路由器会提示重启，如果没有提示重启，需要手动重启路由器。
+
 ![LAN IP_Reboot](LAN_IP_Reboot.png)
 

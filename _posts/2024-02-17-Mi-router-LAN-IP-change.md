@@ -4,7 +4,7 @@ title: 小米路由器有线中继（AP）模式下更改IP地址
 categories: [Router]
 ---
 
-缸更换了小米 WiFi7 的新路由器 BE3600，发现将 BE3600 设置为 AP 模式时，无法设置LAN IP，以下方法可以让你自定义LAN IP。注意只能设置IP地址，不能设置DNS和网关。
+刚更换了小米 WiFi7 的新路由器 BE3600，发现将 BE3600 设置为 AP 模式时，无法设置LAN IP，以下方法可以让你自定义LAN IP。注意只能设置IP地址，不能设置DNS和网关。
 
 1. 将 BE3600 设置为有线中继，并且能正常上网。
  
@@ -27,3 +27,5 @@ http://172.28.88.202/cgi-bin/luci/;stok=3456abcdef7890/web/setting/wan
 
 ![LAN IP_Reboot](LAN_IP_Reboot.png)
 
+
+**经测试，以上方法适用于其它型号小米/红米路由器。**

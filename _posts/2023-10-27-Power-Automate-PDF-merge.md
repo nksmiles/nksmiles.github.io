@@ -9,7 +9,11 @@ categories: [PowerAutomate]
 下面是一个简单的 PDF 合并的工作流，比之前使用 PDF 工具的合并操作方便了太多。
 
 ```
-Display.SelectFolder Description: $'''请选择要做合并处理的 PDF 文件所在的文件夹''' InitialDirectory: $'''D:\\OneDrive\\80_Machine_Data\\''' IsTopMost: True SelectedFolder=> SelectedFolder ButtonPressed=> ButtonPressed
+DISABLE Display.SelectFolder Description: $'''请选择要做合并处理的 PDF 文件所在的文件夹''' InitialDirectory: $'''D:\\OneDrive\\80_Machine_Data\\''' IsTopMost: True SelectedFolder=> SelectedFolder ButtonPressed=> ButtonPressed
+
+Display.SelectFileDialog.SelectFile Title: $fx'请在要做 PDF 合并处理的文件夹中任选一个 PDF 文件：' InitialDirectory: $fx'D:\OneDrive - GalileoTP' FileFilter: $fx'*.PDF' IsTopMost: True CheckIfFileExists: True SelectedFile=> SelectedFile ButtonPressed=> ButtonPressed
+
+File.GetPathPart File: $fx'=SelectedFile' Directory=> SelectedFolder
 
 IF ButtonPressed = $'''Cancel''' THEN
 EXIT Code: 0

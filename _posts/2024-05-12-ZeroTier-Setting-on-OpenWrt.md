@@ -35,7 +35,7 @@ root@OpenWrt:~# zerotier-cli listnetworks
 
 # OpenWrt 设置
 
-## 查看授权后的状态
+### 查看授权后的状态
 
 ```bash
 root@OpenWrt:~# zerotier-cli listnetworks
@@ -43,20 +43,27 @@ root@OpenWrt:~# zerotier-cli listnetworks
 200 listnetworks 3efa5cb78ae7269c Song 9e:b1:62:73:48:ce OK PRIVATE ztrfylxeiw 192.168.192.18/24
 ```
 
-## 创建新接口
+### 创建新接口
 
 ![image](05.png)
 
 ![image](06.png)
 
-## 设置防火墙规则
+### 设置防火墙规则
 
 ![image](07.png)
 
 ![image](08.png)
 
+### 设置防火墙通信规则
 
+![image](09.png)
 
+![image](10.png)
 
-## 参考连接
-https://www.youtube.com/watch?v=pa0tkch3lss
+![image](11.png)
+
+### 参考连接
+[https://www.youtube.com/watch?v=pa0tkch3lss
+](https://www.youtube.com/watch?v=pa0tkch3lss
+)

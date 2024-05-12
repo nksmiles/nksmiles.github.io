@@ -37,6 +37,8 @@ root@OpenWrt:~# zerotier-cli listnetworks
 
 ### 查看授权后的状态
 
+登录中断后查看授权后的连接状态：
+
 ```bash
 root@OpenWrt:~# zerotier-cli listnetworks
 200 listnetworks <nwid> <name> <mac> <status> <type> <dev> <ZT assigned ips>
@@ -62,6 +64,10 @@ root@OpenWrt:~# zerotier-cli listnetworks
 ![image](10.png)
 
 ![image](11.png)
+
+# 测试设置结果
+
+若测试成功，则可以通过 192.168.192.18 访问 OpenWrt 页面。
 
 ### 参考连接
 [https://www.youtube.com/watch?v=pa0tkch3lss

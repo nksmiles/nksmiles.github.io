@@ -61,7 +61,16 @@ server {
 
 可以使用lsof -i:443 查看是否已经启用IPv6的端口监听。
 
-
+```
+$ lsof -i:443
+COMMAND     PID  USER   FD   TYPE   DEVICE SIZE/OFF NODE NAME
+nginx   4142424  root    6u  IPv4 17904885      0t0  TCP *:https (LISTEN)
+nginx   4142424  root   11u  IPv6 18110384      0t0  TCP *:https (LISTEN)
+nginx   4184819 nginx    6u  IPv4 17904885      0t0  TCP *:https (LISTEN)
+nginx   4184819 nginx   11u  IPv6 18110384      0t0  TCP *:https (LISTEN)
+nginx   4184820 nginx    6u  IPv4 17904885      0t0  TCP *:https (LISTEN)
+nginx   4184820 nginx   11u  IPv6 18110384      0t0  TCP *:https (LISTEN)
+```
 
 ## 参考
 

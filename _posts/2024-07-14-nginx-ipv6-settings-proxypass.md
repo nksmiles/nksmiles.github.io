@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: GO的包管理和构建
+title: Nginx IPv6 Server设置笔记
 categories: [Linux]
 ---
 

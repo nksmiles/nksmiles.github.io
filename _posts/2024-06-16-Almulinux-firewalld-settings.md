@@ -43,7 +43,7 @@ firewall-cmd --zone=public --list-ports
 ```
 
 也可以通过配置文件 `/etc/firewalld/zones/public.xml` 查看端口设置。
-对应的 Service 配置文件在 /usr/lib/firewalld/services 对应的 xml 文件。
+对应的 Service 配置就是 /usr/lib/firewalld/services 目录下对应的 xml 文件。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -54,9 +54,7 @@ firewall-cmd --zone=public --list-ports
   <service name="dhcpv6-client"/>
   <service name="cockpit"/>
   <port port="80" protocol="tcp"/>
-  <port port="65432" protocol="tcp"/>
   <port port="443" protocol="tcp"/>
-  <port port="47151" protocol="tcp"/>
   <forward/>
 </zone>
 ```

@@ -42,6 +42,27 @@ firewall-cmd --get-services
 firewall-cmd --zone=public --list-ports
 ```
 
+也可以通过配置文件 `/etc/firewalld/zones/public.xml` 查看端口设置。
+对应的 Service 配置文件在 /usr/lib/firewalld/services 对应的 xml 文件。
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<zone>
+  <short>Public</short>
+  <description>For use in public areas. You do not trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</description>
+  <service name="ssh"/>
+  <service name="dhcpv6-client"/>
+  <service name="cockpit"/>
+  <port port="80" protocol="tcp"/>
+  <port port="65432" protocol="tcp"/>
+  <port port="443" protocol="tcp"/>
+  <port port="47151" protocol="tcp"/>
+  <forward/>
+</zone>
+```
+
 ## 参考链接
+
 [centos almalinux rocketLinux firewall-cmd 开放多个连续端口](https://blog.csdn.net/WonSafe/article/details/131536185)
+
 [CentOS7 Firewall 常用命令汇总，开放端口及查看已开放的端口](https://blog.csdn.net/lvqingyao520/article/details/81075094)

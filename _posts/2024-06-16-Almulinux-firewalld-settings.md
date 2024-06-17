@@ -58,8 +58,9 @@ firewall-cmd --zone=public --list-ports
   <service name="ssh"/>
   <service name="dhcpv6-client"/>
   <service name="cockpit"/>
-  <port port="80" protocol="tcp"/>
-  <port port="443" protocol="tcp"/>
+  <service name="http"/>
+  <service name="https"/>
+  <port port="8443" protocol="tcp"/>
   <forward/>
 </zone>
 ```

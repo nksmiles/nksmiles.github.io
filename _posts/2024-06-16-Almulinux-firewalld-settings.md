@@ -25,7 +25,7 @@ firewall-cmd --zone=public --add-port=4440-4442/tcp --permanent
 firewall-cmd --reload
 ```
 
-查看当前开了哪些端口
+查看当前为哪些服务开放了哪些端口。
 
 其实一个服务对应一个端口，每个服务对应 /usr/lib/firewalld/services 下面一个 xml 文件。
 ```
@@ -36,7 +36,12 @@ firewall-cmd --list-services
 ```
 firewall-cmd --get-services
 ```
- 
+
+添加服务到firewalld以便开放对应的端口，如果修改了默认端口，则要提前编辑/usr/lib/firewalld/services 下面对应的 xml 文件。
+```
+firewall-cmd --add-services http
+```
+
 查看所有打开的端口： 
 ```
 firewall-cmd --zone=public --list-ports

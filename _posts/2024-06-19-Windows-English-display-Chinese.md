@@ -19,3 +19,6 @@ Windows 显示语言设置为英文时简体中文显示异常，尤其是 Edge 
 ## 参考
 
 [Windows 显示语言设置为英文时简体中文以日文或繁体中文字形显示的解决办法](https://zhuanlan.zhihu.com/p/502139239)
+
+[Windows 英语为显示语言 中文字体显示问题
+](https://www.v2ex.com/t/901385)

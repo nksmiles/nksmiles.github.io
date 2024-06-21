@@ -39,7 +39,7 @@ firewall-cmd --get-services
 
 添加服务到firewalld以便开放对应的端口，如果修改了默认端口，则要提前编辑/usr/lib/firewalld/services 下面对应的 xml 文件。
 ```
-firewall-cmd --add-services http
+firewall-cmd --add-service http
 ```
 
 查看所有打开的端口： 

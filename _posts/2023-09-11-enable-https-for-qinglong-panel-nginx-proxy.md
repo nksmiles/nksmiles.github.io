@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: 为青龙面板启用 HTTPS
+title: 为青龙面板启用 HTTPS (nginx 代理设置）
 categories: [Linux]
 ---
 

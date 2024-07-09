@@ -20,7 +20,7 @@ pcieport 000:00:1d.0: aer: error of this agent is reported first
 sudo nano /etc/default/grub
 ```
 
-找到GRUB_CMDLINE_LINUX_DEFAULT这一行：
+找到 `GRUB_CMDLINE_LINUX_DEFAULT=""` 这一行：
 
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="pcie_aspm=off"

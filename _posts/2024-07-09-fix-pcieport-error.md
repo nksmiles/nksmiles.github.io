@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: pcieport 000:00:1d.0: aer: error of this agent is reported first故障修复
+title: pcieport aer 错误 故障修复
 categories: [Linux]
 ---
 

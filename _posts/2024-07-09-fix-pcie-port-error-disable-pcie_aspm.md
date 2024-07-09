@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: pcieport aer 错误 故障修复（禁用pcie_aspm）
+title: pcie port aer 错误 故障修复（禁用pcie_aspm）
 categories: [Linux]
 ---
 

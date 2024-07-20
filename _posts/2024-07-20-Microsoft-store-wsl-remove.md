@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: 新版 Microsoft Store 中的 Windows Subsystem for Linux 彻底移除办法
-categories: [前端]
+categories: [Windows]
 ---
 
 此前 Windows 10、11可以在 `启用或关闭 Windows 功能` 中通过取消勾选 `适用于 Windows 的 Linux 子系统`来彻底移除wsl。

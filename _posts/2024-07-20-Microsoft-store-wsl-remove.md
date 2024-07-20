@@ -7,6 +7,7 @@ categories: [前端]
 此前 Windows 10、11可以在 `启用或关闭 Windows 功能` 中通过取消勾选 `适用于 Windows 的 Linux 子系统`来彻底移除wsl。
 
 但近期（2024年7月）在Windows 10和11上都发现无法通过上述方法彻底删除wsl。取消勾选应用后桌面仍有一个企鹅Linux图标。
+进入Microsoft Store，选择左侧下部的“库”，能看到 `Windows Subsystem for Linux`，通过Microsoft Store无法删除。
 
 实测可以通过以下办法彻底移除：
 

@@ -31,11 +31,11 @@ NUMBERSTRING 不是官方的 Excel 函数，它只是为了与旧的 Lotus123 �
 =SUBSTITUTE(SUBSTITUTE(TEXT(INT(A1),"[DBNum2][$-804]G/通用格式元"&IF(INT(A1)=A1,"整",""))&TEXT(MID(A1,FIND(".",A1&".0")+1,1),"[DBNum2][$-804]G/通用格式角")&TEXT(MID(A1,FIND(".",A1&".0")+2,1),"[DBNum2][$-804]G/通用格式分"),"零角","零"),"零分","")
 ```
 
-下面的示例中，A1单元格中的数字为1234.56
+A1单元格中的数字为1234.56时，使用上面的公式，得到结果为：
 
-|公式                 |结果           |
-| ------------------- | -----------: | 
-|=SUBSTITUTE(SUBSTITUTE(TEXT(INT(A1),"[DBNum2][$-804]G/通用格式元"&IF(INT(A1)=A1,"整",""))&TEXT(MID(A1,FIND(".",A1&".0")+1,1),"[DBNum2][$-804]G/通用格式角")&TEXT(MID(A1,FIND(".",A1&".0")+2,1),"[DBNum2][$-804]G/通用格式分"),"零角","零"),"零分","")  |壹仟贰佰叁拾肆元伍角陆分 |
+```
+壹仟贰佰叁拾肆元伍角陆分
+```
 
 
 这个组合函数因为使用了Excel的 [DBNum2]数字格式，所以依赖于系统的语言设置。需要系统语言设置为简体中文才能生效。
@@ -61,11 +61,11 @@ CHOOSE(MID(TEXT(A1,"000000000.00"),8,1)+1,,,"Twenty ","Thirty ","Forty ","Fifty 
 &IF(--MID(TEXT(A1,"000000000.00"),8,1)<>1,CHOOSE(MID(TEXT(A1,"000000000.00"),9,1)+1,,"One","Two","Three","Four","Five","Six","Seven","Eight","Nine"),CHOOSE(MID(TEXT(A1,"000000000.00"),9,1)+1,"Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"))
 ```
 
-下面的示例中，A1单元格中的数字为1234
+A1单元格中的数字为1234时，使用上面的公式，得到的结果为：
 
-|公式                 |结果                                  |
-| ------------------- | -----------------------------------: |
-|=CHOOSE(LEFT(TEXT(A1,"000000000.00"))+1,,"One","Two","Three","Four","Five","Six","Seven","Eight","Nine")&IF(--LEFT(TEXT(A1,"000000000.00"))=0,,IF(AND(--MID(TEXT(A1,"000000000.00"),2,1)=0,--MID(TEXT(A1,"000000000.00"),3,1)=0)," Hundred"," Hundred and "))&CHOOSE(MID(TEXT(A1,"000000000.00"),2,1)+1,,,"Twenty ","Thirty ","Forty ","Fifty ","Sixty ","Seventy ","Eighty ","Ninety ")&IF(--MID(TEXT(A1,"000000000.00"),2,1)<>1,CHOOSE(MID(TEXT(A1,"000000000.00"),3,1)+1,,"One","Two","Three","Four","Five","Six","Seven","Eight","Nine"),CHOOSE(MID(TEXT(A1,"000000000.00"),3,1)+1,"Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"))&IF((--LEFT(TEXT(A1,"000000000.00"))+MID(TEXT(A1,"000000000.00"),2,1)+MID(TEXT(A1,"000000000.00"),3,1))=0,,IF(AND((--MID(TEXT(A1,"000000000.00"),4,1)+MID(TEXT(A1,"000000000.00"),5,1)+MID(TEXT(A1,"000000000.00"),6,1)+MID(TEXT(A1,"000000000.00"),7,1))=0,(--MID(TEXT(A1,"000000000.00"),8,1)+RIGHT(TEXT(A1,"000000000.00")))>0)," Million and "," Million "))&CHOOSE(MID(TEXT(A1,"000000000.00"),4,1)+1,,"One","Two","Three","Four","Five","Six","Seven","Eight","Nine")&IF(--MID(TEXT(A1,"000000000.00"),4,1)=0,,IF(AND(--MID(TEXT(A1,"000000000.00"),5,1)=0,--MID(TEXT(A1,"000000000.00"),6,1)=0)," Hundred"," Hundred and"))&CHOOSE(MID(TEXT(A1,"000000000.00"),5,1)+1,,," Twenty"," Thirty"," Forty"," Fifty"," Sixty"," Seventy"," Eighty"," Ninety")&IF(--MID(TEXT(A1,"000000000.00"),5,1)<>1,CHOOSE(MID(TEXT(A1,"000000000.00"),6,1)+1,," One"," Two"," Three"," Four"," Five"," Six"," Seven"," Eight"," Nine"),CHOOSE(MID(TEXT(A1,"000000000.00"),6,1)+1," Ten"," Eleven"," Twelve"," Thirteen"," Fourteen"," Fifteen"," Sixteen"," Seventeen"," Eighteen"," Nineteen"))&IF((--MID(TEXT(A1,"000000000.00"),4,1)+MID(TEXT(A1,"000000000.00"),5,1)+MID(TEXT(A1,"000000000.00"),6,1))=0,,IF(OR((--MID(TEXT(A1,"000000000.00"),7,1)+MID(TEXT(A1,"000000000.00"),8,1)+MID(TEXT(A1,"000000000.00"),9,1))=0,--MID(TEXT(A1,"000000000.00"),7,1)<>0)," Thousand "," Thousand and "))&CHOOSE(MID(TEXT(A1,"000000000.00"),7,1)+1,,"One","Two","Three","Four","Five","Six","Seven","Eight","Nine")&IF(--MID(TEXT(A1,"000000000.00"),7,1)=0,,IF(AND(--MID(TEXT(A1,"000000000.00"),8,1)=0,--MID(TEXT(A1,"000000000.00"),9,1)=0)," Hundred "," Hundred and "))&CHOOSE(MID(TEXT(A1,"000000000.00"),8,1)+1,,,"Twenty ","Thirty ","Forty ","Fifty ","Sixty ","Seventy ","Eighty ","Ninety ")&IF(--MID(TEXT(A1,"000000000.00"),8,1)<>1,CHOOSE(MID(TEXT(A1,"000000000.00"),9,1)+1,,"One","Two","Three","Four","Five","Six","Seven","Eight","Nine"),CHOOSE(MID(TEXT(A1,"000000000.00"),9,1)+1,"Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen")) | One Thousand Two Hundred and Thirty Four |
+```
+ One Thousand Two Hundred and Thirty Four
+```
 
 
 上述函数仅支持整数数字，不支持小数。

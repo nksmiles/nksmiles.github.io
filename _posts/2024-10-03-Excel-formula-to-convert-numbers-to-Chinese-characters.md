@@ -15,10 +15,10 @@ NUMBERSTRING 不是官方的 Excel 函数，它只是为了与旧的 Lotus123 �
 下面的示例中，A1单元格中的数字为1234
 
 |公式                 |结果           |
-| ------------------- | -----------: |
+| ------------------- | -----------|
 |=NUMBERSTRING(A1,1)  |一千二百三十四 |
-|=NUMBERSTRING(A1,1)  |壹仟贰佰叁拾肆 |
-|=NUMBERSTRING(A1,1)  |一二三四      |
+|=NUMBERSTRING(A1,2)  |壹仟贰佰叁拾肆 |
+|=NUMBERSTRING(A1,3)  |一二三四      |
 
 实测使用NUMBERSTRING函数不能转换带小数的数字，在最新的Microsoft 365 Excel中仍然可用。
 

@@ -74,8 +74,9 @@ import Caddyfile.d/*.caddyfile
 
 ```
 
-
+cockpit本地环回访问：
 `nano /etc/cockpit/cockpit.conf`
+
 ```
 [WebService]
 # 允许通过你的公网域名和本地环回地址访问
@@ -87,6 +88,8 @@ UrlRoot = /cockpit-bandwagonhost/
 
 ```
 
+
+cockpit用户登录：
 `nano /etc/cockpit/disallowed-users`
 
 ```# List of users which are not allowed to login to Cockpit
@@ -95,6 +98,8 @@ UrlRoot = /cockpit-bandwagonhost/
 
 ```
 
+
+php-fpm权限问题：
 `nano /etc/php-fpm.d/www.conf`
 
 ```
@@ -102,6 +107,8 @@ listen.acl_users = apache,nginx,caddy
 
 ```
 
+
+自动封禁IP
 `nano /etc/fail2ban/jail.local`
 
 ```

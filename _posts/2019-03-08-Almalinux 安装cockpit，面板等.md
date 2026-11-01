@@ -88,6 +88,7 @@ UrlRoot = /cockpit-bandwagonhost/
 ```
 
 `nano /etc/cockpit/disallowed-users`
+
 ```# List of users which are not allowed to login to Cockpit
 # List of users which are not allowed to login to Cockpit
 #root
@@ -95,6 +96,7 @@ UrlRoot = /cockpit-bandwagonhost/
 ```
 
 `nano /etc/php-fpm.d/www.conf`
+
 ```
 listen.acl_users = apache,nginx,caddy
 

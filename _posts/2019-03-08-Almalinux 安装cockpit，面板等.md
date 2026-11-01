@@ -99,3 +99,20 @@ UrlRoot = /cockpit-bandwagonhost/
 listen.acl_users = apache,nginx,caddy
 
 ```
+
+`nano /etc/fail2ban/jail.local`
+
+```
+[DEFAULT]
+ignoreip = 127.0.0.1/8 192.168.1.0/24
+bantime  = 30d
+findtime = 1h
+maxretry = 5
+backend  = systemd
+banaction = firewallcmd-ipset
+
+[pam-generic]
+enabled = true
+backend = systemd
+
+```

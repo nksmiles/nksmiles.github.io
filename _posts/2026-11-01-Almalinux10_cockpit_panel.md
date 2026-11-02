@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: Almalinux 安装cockpit、面板等
+title: Almalinux 安装 cockpit、面板等
 categories: [Linux]
 ---
 

@@ -17,6 +17,9 @@ Docker 是 Linux 虚拟化的一种封装，提供简单易用的容器使用接
 `dnf install cockpit`
 
 
+
+### 编辑 caddy 配置文件
+
 `nano /etc/caddy/Caddyfile`
 
 
@@ -58,7 +61,8 @@ import Caddyfile.d/*.caddyfile
 ```
 
 
-cockpit本地环回访问：
+### cockpit本地环回访问：
+
 `nano /etc/cockpit/cockpit.conf`
 
 ```
@@ -69,21 +73,22 @@ Origins = https://g.galileotp.com.cn wss://g.galileotp.com.cn https://127.0.0.1:
 ProtocolHeader = X-Forwarded-Proto
 # 允许通过二级路径/子路径进行代理访问
 UrlRoot = /cockpit-bandwagonhost/
-
 ```
 
 
-cockpit用户登录：
+### cockpit用户登录：
+
 `nano /etc/cockpit/disallowed-users`
+
 
 ```# List of users which are not allowed to login to Cockpit
 # List of users which are not allowed to login to Cockpit
 #root
-
 ```
 
 
-php-fpm权限问题：
+### php-fpm权限问题：
+
 `nano /etc/php-fpm.d/www.conf`
 
 ```
@@ -91,8 +96,10 @@ listen.acl_users = apache,nginx,caddy
 ```
 
 
-自动封禁IP
+### 自动封禁IP
+
 `nano /etc/fail2ban/jail.local`
+
 
 ```
 [DEFAULT]

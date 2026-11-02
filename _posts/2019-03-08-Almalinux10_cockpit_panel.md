@@ -19,20 +19,8 @@ Docker 是 Linux 虚拟化的一种封装，提供简单易用的容器使用接
 
 `nano /etc/caddy/Caddyfile`
 
+
 ```
-# The Caddyfile is an easy way to configure your Caddy web server.
-#
-# https://caddyserver.com/docs/caddyfile
-
-
-# The configuration below serves a welcome page over HTTP on port 80.  To use
-# your own domain name with automatic HTTPS, ensure your A/AAAA DNS record is
-# pointing to this machine's public IP, then replace `http://` with your domain
-# name.  Refer to the documentation for full instructions on the address
-# specification.
-#
-# https://caddyserver.com/docs/caddyfile/concepts#addresses
-
 g.galileotp.com.cn {
     tls 327649070@qq.com
 
@@ -66,13 +54,9 @@ g.galileotp.com.cn {
         output file /var/log/caddy/access.log
     }
 }
-
-# As an alternative to editing the above site block, you can add your own site
-# block files in the Caddyfile.d directory, and they will be included as long
-# as they use the .caddyfile extension.
 import Caddyfile.d/*.caddyfile
-
 ```
+
 
 cockpit本地环回访问：
 `nano /etc/cockpit/cockpit.conf`
@@ -104,7 +88,6 @@ php-fpm权限问题：
 
 ```
 listen.acl_users = apache,nginx,caddy
-
 ```
 
 
@@ -123,5 +106,5 @@ banaction = firewallcmd-ipset
 [pam-generic]
 enabled = true
 backend = systemd
-
 ```
+
